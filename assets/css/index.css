@@ -42,12 +42,12 @@ div {
     font-size: 1.8vw;
     padding: 1vw;
 }
-.nav__menu li:hover .subMenu{
-    display: block;
-}
+
 .subMenu{
     display: none;
     position: absolute;
+    
+    
 }
 
 .nav__menu li:hover .subMenu{
@@ -55,13 +55,15 @@ div {
     background-color: #140539;
 }
 .subMenu li a{
-    padding: 1rem;
     font-size: 1.4em;
     transition: all .3s ease-in-out;
     color: white;
 }
 .subMenu li a:hover{
-    color: #94D104
+    color: #94D104;
+}
+.subMenu li{
+    padding: 1rem 1rem;
 }
 
 li:hover>a {
@@ -129,6 +131,7 @@ body{
     font-size: 1.5em;
     font-style: normal;
     font-weight: 700;
+    transition: transform .3s ease-in-out;
 }
 main{
     padding-top: 12.5em;
@@ -169,6 +172,7 @@ main{
     border-radius: 3.5rem;
     border-color: #7DA61E;
     padding: 1rem 4rem;
+    transition: background-color .1s ease-in-out;
 
 }
 .contenedorPlan h4{
@@ -356,9 +360,18 @@ table p {
     background-color: #140539;
     border: 1px solid white;
     color: white;
-    width: 15rem;
+    width: 2.5rem;
     height: 2.5rem;
+    border-radius:.5em ;
+    transition: width .6s linear;
 }
+.contenedorInput:focus{
+    width: 15rem;
+}
+
+
+
+
 form{
     color: white;
     padding-left: 2rem;
@@ -548,8 +561,24 @@ label{
     }
 }
 
+.boton:focus{
+    background-color: #B7DE5D;
+    border-color: #140539;
+
+}
+
+.contenedoresSections:hover h3{
+    transform:scale(1.5,1.5) ;
+}
+@keyframes logo{
+    from{transform: scaleX(1);}
+    to{transform:scaleX(1.1);}
 
 
+}
 
+#sectionLogo svg{
+    animation: logo 5s infinite alternate ease-in-out;
+}
 
 

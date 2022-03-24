@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img/favicon.jpg" type="image/x-icon">
     <link rel="stylesheet" href="../css/index.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     <title>Sportfit | Querer es poder</title>
 
 </head>
@@ -307,7 +310,7 @@
             </table>
         </section>
         <section id="listaActiv" class="flex-row">
-            <div class="activityCard flex-column" id="spinning">
+            <div class="activityCard flex-column" id="spinning" data-aos="flip-left">
                 <h3>Spinning</h3>
                 <img src=" ../img/bicicletas.jpg" alt="Spinning" >
                     <p>Contamos tanto con clases indoor como outdoor. Pedalea al ritmo de la musica mientras trabajas
@@ -316,7 +319,7 @@
                         lo
                         más real posible. Contamos con 7 clases semanales.</p>
                     </div>
-                    <div class="activityCard flex-column" id="box">
+                    <div class="activityCard flex-column" id="box" data-aos="flip-left">
                         <h3>Box functional</h3>
                         <img src="../img/boxeo.jpg" alt="Box" >
                         <p>Podes disfrutar del area de boxeo, inaugurada recientemente, en el que hay sacos de boxeo
@@ -327,7 +330,7 @@
                             con la
                             ayuda de un profesional.</p>
                     </div>
-                    <div class="activityCard flex-column" id="crossfit">
+                    <div class="activityCard flex-column" id="crossfit" data-aos="flip-left">
                         <h3>Crossfit</h3>
                         <img src="../img/crossfit.jpg" alt="Crossfit">
                         <p>Es un sistema de entrenamiento de intervalos de alta intensidad, cuyo objetivo es mejorar la
@@ -340,7 +343,7 @@
                             los
                             mejores profesionales. </p>
                     </div>
-                    <div class="activityCard flex-column" id="musculacion">
+                    <div class="activityCard flex-column" id="musculacion" data-aos="flip-left">
                         <h3>Musculacion</h3>
                         <img src="../img/musculacion.jpg" alt="Musculacion">
                         <p>Contamos con una gran variedad de maquinas para que puedas mejorar tu resistencia y
@@ -351,7 +354,7 @@
                             que te
                             preparen una rutina segun tus requerimientos.</p>
                     </div>
-                    <div class="activityCard flex-column" id="cardio">
+                    <div class="activityCard flex-column" id="cardio" data-aos="flip-left">
                         <h3>Cardio</h3>
                         <img src="../img/cardio.jpg" alt="Cardio">
                         <p>Contamos con bicicletas, cintas y escaladores de ultima generacion, con areas especiales de
@@ -361,7 +364,7 @@
                             nuestro equipo
                             de maratonistas.</p>
                     </div>
-                    <div class="activityCard flex-column" id="natacion">
+                    <div class="activityCard flex-column" id="natacion" data-aos="flip-left">
                         <h3>Natacion</h3>
                         <img src="../img/natacion.jpg" alt="Natacion">
                         <p>La piscina está habilitada todos los dias de 8:00 a 12:00. Además contas con las clases
@@ -371,7 +374,7 @@
                             trabajar la flexibilidad y a su vez tonificar tu cuerpo, esta actividad es ideal para vos.
                         </p>
                     </div>
-                    <div class="activityCard flex-column" id="yoga">
+                    <div class="activityCard flex-column" id="yoga" data-aos="flip-left">
                         <h3>Yoga</h3>
                         <img src="../img/yoga.jpg" alt="Yoga">
                         <p>Es una actividad que te permite aumentar la flexibilidad y aliviar dolores. La clase cuenta
@@ -380,7 +383,7 @@
                             estan
                             disponibles diariamiente salvo los viernes.</p>
                     </div>
-                    <div class="activityCard flex-column" id="stretching">
+                    <div class="activityCard flex-column" id="stretching" data-aos="flip-left">
                         <h3>Stretching</h3>
                         <img src="../img/stretching.jpg" alt="Stretching" >
                         <p>Ideal si forzaste demasiado tus musculos, la clase de Stretching esta pensada para enseñar
@@ -391,7 +394,7 @@
                             sanguinea y
                             el aligeramiento de dolores musculares. Contamos con 3 clases semanales.</p>
                     </div>
-                    <div class="activityCard flex-column" id="zumba">
+                    <div class="activityCard flex-column" id="zumba" data-aos="flip-left">
                         <h3>Zumba</h3>
                         <img src="../img/zumba.jpg" alt="Zumba" >
                         <p>Es una disciplina fitness enfocada en desarrollar, fortalecer y dar flexiblidad al cuerpo
@@ -399,7 +402,7 @@
                             movimientos de baile combinados con una serie de rutinas aerobicas. Ideal para quemar grasa.
                             Contamos con 3 clases semanales.</p>
                     </div>
-                    <div class="activityCard flex-column" id="tallerAbs">
+                    <div class="activityCard flex-column" id="tallerAbs" data-aos="flip-left">
                         <h3>Taller de abs</h3>
                         <img src="../img/abs.jpg" alt="Abs">
                         <p>Hay 2 clases semanales en las que podes aprender todas las combinaciones de ejercicios de
@@ -408,7 +411,7 @@
                             la clase
                             de los miercoles, habrá un desafío en el que podes demostrar todo lo aprendido. </p>
                     </div>
-                    <div class="activityCard flex-column" id="functional">
+                    <div class="activityCard flex-column" id="functional" data-aos="flip-left">
                         <h3>Functional</h3>
                         <img src="../img/functional.jpg" alt="Functional">
                         <p>Se realizan circuitos intensivos de 45 minutos a 1 hora. El entrenamiento funcional permite
@@ -449,6 +452,11 @@
 
     </footer>
     <!--Final del footer-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 
 </html>
