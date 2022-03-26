@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img/favicon.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="../css/index.css">
+    
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/index.css">
 
     <title>Sportfit | Querer es poder</title>
 </head>
@@ -17,7 +18,7 @@
 <body>
     <!--Inicio del header-->
     <header>
-        <nav class="contenedorNavegacion flex-row container">
+        <nav class="contenedorNavegacion flex-fila conteiner">
             <a href="../../index.html">
                 <div><svg width="349.99999999999994" height="202.12406131464994"
                         viewBox="0 0 349.99999999999994 202.12406131464994" class="css-1j8o68f logo">
@@ -70,7 +71,7 @@
                         </g>
                     </svg> </div>
             </a>
-            <ul class="nav__menu flex-row">
+            <ul class="nav__menu flex-fila">
                 <li><a href="../../index.html">INICIO</a></li>
                 <li><a href="actividades.html">ACTIVIDADES</a>
                     <ul class="subMenu">
@@ -87,20 +88,20 @@
                         <li><a href="actividades.html#functional">FUNCTIONAL</a></li>
                     </ul>
                 </li>
-                <li><a href="about.html">ACERCA DE <br> NOSOTROS</a></li>
+                <li><a href="about.html"> NOSOTROS</a></li>
                 <li><a href="contacto.html">CONTACTO</a></li>
-                <li><a href="../../index.html#asociate">ASOCIATE <br> AHORA</a></li>
+                <li><a href="../../index.html#asociate">ASOCIATE</a></li>
             </ul>
         </nav>
 
     </header>
     <!--Final del header-->
-    <main id="contacto" class="container flex-column">
+    <main id="contacto" class="conteiner flex-columna">
         <h2>Contacto</h2>
-        <div class="flex-column">
+        <div class="flex-columna">
             <article>Escribinos completando el siguiente formulario:</article>
-            <div class="contenedorFormulario flex-row">
-                <form action="#" method="POST" class="flex-column">
+            <div class="contenedorFormulario flex-fila">
+                <form action="#" method="POST" class="flex-columna">
                     <div>
                         <div class="contenedorCasillas">
 
@@ -127,9 +128,9 @@
                         <div class="contenedorCasillas">
                             <label for="socio">¿Sos socio?</label>
                             <span>Si</span>
-                            <input type="radio" name="socio" id="socio" value="Si">
+                            <input type="radio" name="socio" id="socio" value="Si" class="form-check-input">
                             <span>No</span>
-                            <input type="radio" name="socio" id="socio" value="No">
+                            <input type="radio" name="socio" id="socio" value="No" class="form-check-input">
                         </div>
                         <div class="contenedorCasillas">
                             <label for="motivo">Motivo del contacto</label>
@@ -148,8 +149,8 @@
                         <textarea name="comentario" id="comentario" class="contenedorInput"></textarea><br>
                     </div>
 
-                    <div>¿Quiere recibir informacion sobre nosotros?
-                        <input type="checkbox" name="info" value="1">
+                    <div class="form-check form-switch">¿Quiere recibir informacion sobre nosotros?
+                        <input type="checkbox" name="info" value="1" class="form-check-input" role="switch" id="flexSwitchCheckDefault">
                     </div>
                     <div class="botones">
                         <input type="submit" value="Enviar" class="boton botonContacto">
@@ -164,7 +165,7 @@
 
     </main>
     <!--Inicio del footer-->
-    <footer class="container flex-row">
+    <footer class="conteiner flex-fila">
         <p>Todos los derechos reservados</p>
         <div>
             <ul class="nav__menu contenedorRedes">
@@ -185,7 +186,7 @@
     <script>
         AOS.init();
     </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 
 </html>

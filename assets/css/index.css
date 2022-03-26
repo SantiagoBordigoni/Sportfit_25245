@@ -70,16 +70,16 @@ li:hover>a {
     color: #94D104;
 }
 
-.flex-row {
+.flex-fila {
     display: flex;
 }
 
-.flex-column {
+.flex-columna {
     display: flex;
     flex-direction: column;
 }
 
-.container {
+.conteiner {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -107,6 +107,7 @@ body{
     "activ contacto";
     
 }
+
 .activ{
     grid-area: activ;
 }
@@ -116,13 +117,20 @@ body{
 .nosotros{
     grid-area: nosotros;
 }
-.contenedorActividades {
-    background-image: url("../img/cardio.jpg");
-    height:100%;
+.carousel-caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+.carousel-caption h3{
+    z-index: 2;
+}
+
+
 .contenedoresSections{
     background-size: cover;
     width: 100%;
+    height: 100%;
     align-items: center;
     justify-content: center;
 }
@@ -181,6 +189,8 @@ main{
     font-family:'Roboto',sans-serif;
     color:#B7DE5D ;
     font-size: 1.25em;
+    margin-bottom: 0;
+    font-weight: 700;
 }
 footer {
     align-items:center;
@@ -204,6 +214,7 @@ footer .nav__menu{
     background-size: cover;
     justify-content: center;
     align-items: center;
+    
 }
 .logoFondo{
     height:30vh ;
@@ -215,6 +226,7 @@ footer .nav__menu{
     font-size: 1.5em;
     text-align: center;
     padding-top: 1rem;
+    margin-bottom: 0;
 }
 .contenedorPlan article ul{
     list-style-type:circle;
@@ -222,6 +234,8 @@ footer .nav__menu{
     padding-top: 2rem;
     font-weight: 600;
     font-size: 1.4em;
+    
+
 }
 
 #listaActiv{
@@ -293,6 +307,9 @@ caption div {
     margin-bottom: 1rem;
     width: 10em;
 }
+caption{
+    padding: 0;
+}
 
 
 
@@ -312,6 +329,9 @@ table th {
     padding: 1em 1em 1em 1em;
 
 }
+table{
+    caption-side: top;
+}
 
 table p {
     color: #140539;
@@ -322,7 +342,7 @@ table p {
 
 .contenedorFormulario{
     width: 100%;
-    height: 40rem;
+    height: 45rem;
     background-color: #140539;
     justify-content:space-between;
 
@@ -340,6 +360,7 @@ table p {
     font-size: 3em;
     width: 15em;
 
+
 }
 #contacto{
     min-height: 100vh;
@@ -350,6 +371,9 @@ table p {
     align-self: flex-start;
     margin-bottom: 10rem;
     padding-left: 1rem;
+}
+#contacto>.flex-columna{
+    margin-bottom: 10rem;
 }
 
 
@@ -420,7 +444,7 @@ textarea{
 .flex-nosotros{
     gap: 1rem;
 }
-#about .flex-row img{
+#about .flex-fila img{
     width: 70em;
     height: auto;
     border-radius: 20em;
@@ -477,6 +501,14 @@ label{
         flex-direction: column;
         width: 100%;
     }
+    footer p{
+        margin: 0;
+        padding: 0;
+    }
+    footer ul{
+        margin: 0;
+        padding: 0;
+    }
 
     .contenedoresSections{
         background-size: cover;
@@ -492,20 +524,20 @@ label{
     footer{
         flex-direction: column;
         justify-content: space-around;
+
     }
-    #contacto div{
-        flex-direction: column;
-    } 
+    
     #about>article>div.div-about{
         flex-direction: column;
         align-content: center;
         gap: 2rem;
 
     }
-    #about .flex-row img{
+    #about .flex-fila img{
         width: 100%;
         height: 40vh;
         border-radius: 50em;
+        margin: 0;
         
         
     }
@@ -519,6 +551,7 @@ label{
       }
     .contenedorFormulario{
         flex-direction: column;
+        justify-content: center;
     }
     #contacto picture{
         width: 100%;
@@ -547,12 +580,18 @@ label{
         width: 100%;
         
     }
+    #contacto div{
+        flex-direction: column;
+    } 
     #contacto article{
         width: 100%;
     }
-    
-    
-    
+    .headerAsociate{
+        margin-top: 30vh;
+    }
+    .form-check{
+        flex-direction: row-reverse;
+    }
 }
 
 @media screen and (min-width:320px)and (max-width:720px) {
