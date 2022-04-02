@@ -120,6 +120,8 @@ footer {
   height: 10vh; }
   footer .nav__menu {
     display: flex; }
+    footer .nav__menu img {
+      filter: invert(80%) sepia(22%) saturate(5837%) hue-rotate(31deg) brightness(99%) contrast(97%); }
 
 /*VIEWS*/
 #sections {
@@ -128,7 +130,8 @@ footer {
   width: 100%;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: "activ nosotros" "activ contacto"; }
+  grid-template-areas: "activ nosotros"
+ "activ contacto"; }
 
 .activ {
   grid-area: activ; }
@@ -364,7 +367,10 @@ label {
 #about {
   display: grid;
   width: 100%;
-  grid-template-areas: "fondo fondo" "article article" "article article" "ubic ubic";
+  grid-template-areas: "fondo fondo"
+ "article article"
+ "article article"
+ "ubic ubic";
   background-color: #140539;
   color: white;
   gap: 1rem; }

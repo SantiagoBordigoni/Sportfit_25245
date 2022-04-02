@@ -7,6 +7,11 @@ footer {
 
     .nav__menu {
         display: flex;
+        img{
+            filter:invert(80%) sepia(22%) saturate(5837%) hue-rotate(31deg) brightness(99%) contrast(97%);
+        }
+        
+        
 
     }
 }
