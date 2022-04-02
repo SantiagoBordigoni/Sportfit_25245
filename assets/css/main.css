@@ -1,0 +1,500 @@
+/*IMPORTS*/
+/*MISCELANEOUS*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Smooch+Sans:wght@100&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: 'Roboto', sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"); }
+
+html {
+  font-size: 62.5%; }
+
+div {
+  display: inline-block; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+ul {
+  list-style-type: none; }
+
+body {
+  min-height: 100vh;
+  background-color: #140539;
+  font-family: "Roboto Condensed",sans-serif; }
+
+main {
+  padding-top: 12.5em; }
+
+.flex-fila {
+  display: flex; }
+
+.flex-columna {
+  display: flex;
+  flex-direction: column; }
+
+.conteiner {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.boton {
+  background-color: #7DA61E;
+  font-weight: bold;
+  color: white;
+  border-radius: 3.5rem;
+  border-color: #7DA61E;
+  padding: 1rem 4rem;
+  transition: background-color .1s ease-in-out; }
+  .boton:focus {
+    background-color: #B7DE5D;
+    border-color: #140539; }
+
+.logo {
+  width: 12.5em;
+  height: 12.5em; }
+
+.contenedoresSections:hover h3 {
+  transform: scale(1.5, 1.5); }
+
+@keyframes logo {
+  from {
+    transform: scaleX(1); }
+  to {
+    transform: scaleX(1.1); } }
+
+#sectionLogo svg {
+  animation: logo 5s infinite alternate ease-in-out;
+  overflow: hidden; }
+
+/*PARTIALS*/
+header {
+  grid-area: header;
+  background-color: #140539;
+  position: fixed;
+  z-index: 2;
+  width: 100%; }
+
+.contenedorNavegacion {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem; }
+
+.nav__menu {
+  justify-content: space-between; }
+  .nav__menu li a {
+    font-size: 1.8vw;
+    padding: 1vw; }
+  .nav__menu li:hover .subMenu {
+    display: block;
+    background-color: #140539; }
+
+.subMenu {
+  display: none;
+  position: absolute; }
+  .subMenu li {
+    padding: 1rem 1rem; }
+    .subMenu li a {
+      font-size: 1.4em;
+      transition: all .3s ease-in-out;
+      color: white; }
+      .subMenu li a:hover {
+        color: #94D104; }
+  .subMenu a {
+    color: #94D104; }
+
+li:hover > a {
+  color: #94D104; }
+
+footer {
+  align-items: center;
+  justify-content: space-between;
+  background-color: #140539;
+  color: white;
+  height: 10vh; }
+  footer .nav__menu {
+    display: flex; }
+
+/*VIEWS*/
+#sections {
+  display: grid;
+  height: 60vh;
+  width: 100%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "activ nosotros" "activ contacto"; }
+
+.activ {
+  grid-area: activ; }
+
+.contacto {
+  grid-area: contacto; }
+
+.nosotros {
+  grid-area: nosotros; }
+
+.carousel-caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .carousel-caption h3 {
+    z-index: 1; }
+
+.contenedoresSections {
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center; }
+  .contenedoresSections h3 {
+    color: #94D104;
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: 700;
+    transition: transform .3s ease-in-out; }
+
+.contenedorNosotros {
+  background-image: url("../img/discos.jpg");
+  height: 100%; }
+
+.contenedorContacto {
+  background-image: url("../img/recepcion.jpg");
+  height: 100%; }
+
+#asociate {
+  justify-content: space-evenly;
+  background-color: white;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  padding-bottom: 4rem; }
+
+.contenedorPlan {
+  padding: 1rem 3rem 0rem 3rem;
+  border: 0.5em solid #94D104;
+  border-radius: 5em; }
+  .contenedorPlan article {
+    align-items: center;
+    gap: 1rem; }
+    .contenedorPlan article ul {
+      list-style-type: circle;
+      line-height: 2rem;
+      padding-top: 2rem;
+      font-weight: 600;
+      font-size: 1.4em; }
+  .contenedorPlan li {
+    padding-bottom: 3rem; }
+  .contenedorPlan h4 {
+    text-align: center;
+    padding-bottom: 2rem;
+    font-family: 'Roboto', sans-serif;
+    color: #B7DE5D;
+    font-size: 1.25em;
+    margin-bottom: 0;
+    font-weight: 700; }
+
+.boton {
+  background-color: #7DA61E;
+  font-weight: bold;
+  color: white;
+  border-radius: 3.5rem;
+  border-color: #7DA61E;
+  padding: 1rem 4rem;
+  transition: background-color .1s ease-in-out; }
+
+#sectionLogo {
+  background-image: url(../img/contacto.jpeg);
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  justify-content: center;
+  align-items: center; }
+
+.logoFondo {
+  height: 30vh; }
+
+.headerAsociate {
+  background-color: white;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5em;
+  text-align: center;
+  padding-top: 1rem;
+  margin-bottom: 0; }
+
+#listaActiv {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #140539;
+  gap: 0.5rem; }
+
+#mainActiv {
+  background-color: white; }
+  #mainActiv h2 {
+    padding-left: 1rem;
+    padding-bottom: 2rem; }
+
+.activityCard {
+  width: 30em;
+  color: white;
+  background-color: #140539; }
+  .activityCard img {
+    height: 200px;
+    object-fit: cover; }
+  .activityCard p {
+    background-color: #7DA61E;
+    color: #140539;
+    height: 12em;
+    font-size: 1.25em;
+    padding-left: 0.5rem;
+    padding-top: 0.5rem; }
+  .activityCard h3 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2em; }
+
+#seccionClasesGrupales {
+  align-self: center;
+  padding-bottom: 2rem; }
+
+h2 {
+  font-weight: 400;
+  font-size: 4em; }
+
+.caption__titulo {
+  font-size: 1.5em;
+  color: #7DA61E; }
+
+.logoTable {
+  height: 8em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 10em; }
+
+caption {
+  padding: 0; }
+  caption div {
+    background-color: #140539;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 10rem; }
+
+table {
+  caption-side: top; }
+  table td {
+    padding: 0.5em 1em 0.5em 1em;
+    text-align: center;
+    background-color: #B7DE5D; }
+  table th {
+    background-color: #94D104;
+    color: #302827;
+    text-align: center;
+    font-size: 1em;
+    padding: 1em 1em 1em 1em; }
+  table p {
+    color: #140539;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-size: 1.5em; }
+
+.contenedorFormulario {
+  width: 100%;
+  height: 60rem;
+  background-color: #140539;
+  justify-content: space-between; }
+  .contenedorFormulario img {
+    width: 55%;
+    height: 100%;
+    object-fit: cover; }
+
+#contacto {
+  min-height: 100vh;
+  align-items: center;
+  background-color: white; }
+  #contacto article {
+    color: gray;
+    font-weight: 300;
+    font-size: 3em;
+    width: 15em; }
+  #contacto > div {
+    margin-left: 2rem;
+    margin-right: 2rem; }
+  #contacto h2 {
+    align-self: flex-start;
+    margin-bottom: 10rem;
+    padding-left: 1rem; }
+  #contacto .flex-columna {
+    margin-bottom: 10rem; }
+
+.contenedorCasillas {
+  width: 15em; }
+
+.contenedorInput {
+  background-color: #140539;
+  border: 1px solid white;
+  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: .5em;
+  transition: width .6s linear; }
+  .contenedorInput:focus {
+    width: 15rem; }
+
+form {
+  color: white;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-size: 1.25em; }
+
+textarea {
+  resize: none; }
+
+label {
+  display: block; }
+
+#about {
+  display: grid;
+  width: 100%;
+  grid-template-areas: "fondo fondo" "article article" "article article" "ubic ubic";
+  background-color: #140539;
+  color: white;
+  gap: 1rem; }
+  #about article {
+    grid-area: article;
+    border-bottom: 1px solid #94D104; }
+  #about .flex-fila img {
+    width: 70em;
+    height: auto;
+    border-radius: 20em;
+    margin-left: 2rem;
+    margin-right: 2rem; }
+  #about h3 {
+    font-size: 3.6em;
+    font-weight: 500; }
+  #about h4 {
+    font-size: 2.4em;
+    font-weight: 500; }
+  #about p {
+    font-weight: 400;
+    font-size: 1.8em; }
+
+.imagenFondoSoviet {
+  grid-area: fondo;
+  height: 10vh;
+  background-image: url(../img/soviet.jpg);
+  background-size: 100%;
+  background-position: center;
+  border-bottom: 1px solid #94D104; }
+
+#ubicacion {
+  grid-area: ubic;
+  border-bottom: 1px solid #94D104; }
+
+.flex-nosotros {
+  gap: 1rem; }
+
+.div-about {
+  padding-bottom: 1rem;
+  padding-top: 1rem; }
+
+.mapa {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1rem auto; }
+
+.mapouter {
+  position: relative;
+  text-align: right;
+  width: 100%;
+  height: 400px; }
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none;
+  width: 30%;
+  height: 400px; }
+
+.gmap_iframe {
+  height: 400px; }
+
+/*RESPONSIVE*/
+@media screen and (min-width: 320px) and (max-width: 600px) {
+  #sections {
+    display: flex;
+    flex-direction: column;
+    width: 100%; }
+  footer {
+    flex-direction: column;
+    justify-content: space-around; }
+    footer p {
+      margin: 0;
+      padding: 0; }
+    footer ul {
+      margin: 0;
+      padding: 0; }
+  .contenedoresSections {
+    background-size: cover;
+    background-position: center;
+    height: 30vh; }
+  #asociate {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center; }
+  #about .flex-fila img {
+    width: 100%;
+    height: 40vh;
+    border-radius: 50em;
+    margin: 0; }
+  #about article div.div-about {
+    flex-direction: column;
+    align-content: center;
+    gap: 2rem; }
+  #about article div.div-about.reverse {
+    flex-direction: column-reverse; }
+  .gmap_canvas {
+    max-width: 400px;
+    margin: 0 1rem;
+    width: auto; }
+  .contenedorFormulario {
+    flex-direction: column;
+    justify-content: center; }
+  #contacto {
+    min-height: 100vh;
+    width: 100%; }
+    #contacto .botones {
+      display: block; }
+    #contacto article {
+      width: 100%; }
+    #contacto picture {
+      width: 100%; }
+    #contacto img {
+      display: none; }
+    #contacto > div {
+      width: 100%; }
+      #contacto > div > div {
+        width: 100%; }
+        #contacto > div > div > form {
+          align-content: center; }
+          #contacto > div > div > form > div {
+            display: flex;
+            flex-direction: column; }
+  div {
+    flex-direction: column; }
+  .headerAsociate {
+    margin-top: 30vh; }
+  .form-check {
+    flex-direction: row-reverse; } }
+
+@media screen and (min-width: 320px) and (max-width: 720px) {
+  table {
+    display: none; } }

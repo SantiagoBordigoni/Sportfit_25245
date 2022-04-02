@@ -1,0 +1,35 @@
+.flex-fila {
+    display: flex;
+}
+
+.flex-columna {
+    display: flex;
+    flex-direction: column;
+}
+
+.conteiner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.boton {
+    background-color: #7DA61E;
+    font-weight: bold;
+    color: white;
+    border-radius: 3.5rem;
+    border-color: #7DA61E;
+    padding: 1rem 4rem;
+    transition: background-color .1s ease-in-out;
+
+    &:focus {
+        background-color: #B7DE5D;
+        border-color: #140539;
+    }
+
+}
+
+.logo {
+    width: 12.5em;
+    height: 12.5em;
+}
+

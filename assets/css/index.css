@@ -1,4 +1,4 @@
-/*Reset*/
+
 *,
 *::before,
 *::after {
@@ -6,7 +6,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-/*Imports*/
+
 
 @font-face {
     font-family: 'Roboto', sans-serif;

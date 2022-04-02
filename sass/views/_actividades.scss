@@ -1,0 +1,121 @@
+#listaActiv {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #140539;
+    gap: 0.5rem;
+
+
+
+
+}
+
+#mainActiv {
+    background-color: white;
+
+    h2 {
+        padding-left: 1rem;
+        padding-bottom: 2rem;
+    }
+}
+
+.activityCard {
+    width: 30em;
+    color: white;
+    background-color: #140539;
+
+    img {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    p {
+        background-color: #7DA61E;
+        color: #140539;
+        height: 12em;
+        font-size: 1.25em;
+        padding-left: 0.5rem;
+        padding-top: 0.5rem;
+
+    }
+
+    h3 {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2em;
+    }
+
+}
+
+
+
+#seccionClasesGrupales {
+    align-self: center;
+    padding-bottom: 2rem;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 4em;
+}
+
+
+.caption__titulo {
+    font-size: 1.5em;
+    color: #7DA61E;
+}
+
+
+
+.logoTable {
+    height: 8em;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 10em;
+}
+
+caption {
+    padding: 0;
+
+    div {
+        background-color: #140539;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 1rem;
+        padding-right: 10rem;
+
+    }
+}
+
+
+
+
+
+
+
+
+table {
+    caption-side: top;
+
+    td {
+
+        padding: 0.5em 1em 0.5em 1em;
+        text-align: center;
+        background-color: #B7DE5D;
+    }
+
+    th {
+        background-color: #94D104;
+        color: #302827;
+        text-align: center;
+        font-size: 1em;
+        padding: 1em 1em 1em 1em;
+
+    }
+
+    p {
+        color: #140539;
+        font-weight: bold;
+        font-variant: small-caps;
+        font-size: 1.5em;
+    }
+}

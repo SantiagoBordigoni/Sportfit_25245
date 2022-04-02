@@ -1,0 +1,22 @@
+/*IMPORTS*/
+
+/*MISCELANEOUS*/ 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Smooch+Sans:wght@100&display=swap');
+@import './misc/variables';
+
+@import './misc/normalize';
+@import './misc/mixins';
+@import './misc/animations';
+
+/*PARTIALS*/ 
+
+
+@import './partials/header';
+@import './partials/footer';
+
+/*VIEWS*/ 
+@import './views/home';
+@import './views/actividades';
+@import './views/contacto';
+@import './views/nosotros';
+@import'./views/queries'
