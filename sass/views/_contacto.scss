@@ -1,12 +1,12 @@
 .contenedorFormulario {
-    width: 100%;
-    height: 60rem;
-    background-color: #140539;
-    justify-content: space-between;
+    @include sizes(100%,60rem);
+    @include flex($justify:space-between);
+    background-color: map-get($colores, primary);
+    
 
     img {
-        width: 55%;
-        height: 100%;
+        @include sizes(55%,100%);
+       
         object-fit: cover;
 
     }
@@ -19,6 +19,7 @@
     min-height: 100vh;
     align-items: center;
     background-color: white;
+    @include flex($direction:column);
 
     article {
         color: gray;
@@ -32,6 +33,9 @@
     &>div {
         margin-left: 2rem;
         margin-right: 2rem;
+        @include flex($direction:column);
+        margin-bottom: 10rem;
+
     }
 
     h2 {
@@ -40,9 +44,7 @@
         padding-left: 1rem;
     }
 
-    .flex-columna {
-        margin-bottom: 10rem;
-    }
+    
 }
 
 
@@ -53,11 +55,10 @@
 }
 
 .contenedorInput {
-    background-color: #140539;
+    @include sizes(2.5rem,2.5rem);
+    background-color: map-get($colores, primary);
     border: 1px solid white;
     color: white;
-    width: 2.5rem;
-    height: 2.5rem;
     border-radius: .5em;
     transition: width .6s linear;
 
@@ -71,13 +72,15 @@
 
 
 form {
+    @include flex(column,space-evenly, flex-start, 0, wrap);
     color: white;
     padding-left: 2rem;
     padding-top: 1rem;
     padding-right: 1rem;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
     font-size: 1.25em;
+    
+    
+   
 }
 
 textarea {
@@ -86,4 +89,10 @@ textarea {
 
 label {
     display: block;
+}
+.botonContacto{
+    @extend .boton;
+    padding: 1rem 2.5rem;
+    margin-right: 1rem;
+    
 }

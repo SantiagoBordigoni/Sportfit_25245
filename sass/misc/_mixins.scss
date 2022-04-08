@@ -12,24 +12,42 @@
     margin: 0 auto;
 }
 
-.boton {
-    background-color: #7DA61E;
-    font-weight: bold;
-    color: white;
-    border-radius: 3.5rem;
-    border-color: #7DA61E;
-    padding: 1rem 4rem;
-    transition: background-color .1s ease-in-out;
 
-    &:focus {
-        background-color: #B7DE5D;
-        border-color: #140539;
-    }
-
-}
 
 .logo {
     width: 12.5em;
     height: 12.5em;
 }
 
+@mixin sizes($width,$height){
+    height: $height;
+    width: $width;
+}
+@mixin flex($direction: row, $justify: flex-start, $align: flex-start, $gap: 0, $wrap:nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-content: $align;
+    gap: $gap;
+    flex-wrap: $wrap;
+}
+$activities:(
+    spinning:spinning,
+    box:box,
+    crossfit:crossfit,
+    musculacion:musculacion,
+    cardio:cardio,
+    natacion:natacion,
+    yoga:yoga,
+    stretching:stretching,
+    zumba:zumba,
+    abs:abs,
+    functional:functional
+
+);
+@each $activity,$foto in $activities{
+    .bg--#{$activity}{
+        background-image: url("../img/#{$foto}.jpg");
+        background-size: cover;
+    }
+}

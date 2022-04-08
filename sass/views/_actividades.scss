@@ -1,8 +1,6 @@
 #listaActiv {
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: #140539;
-    gap: 0.5rem;
+    background-color: map-get($colores, primary);
+    @include flex(row,space-around, flex-start, 0.5rem, wrap);
 
 
 
@@ -21,16 +19,16 @@
 .activityCard {
     width: 30em;
     color: white;
-    background-color: #140539;
+    background-color:map-get($colores, primary);
 
-    img {
+    div {
         height: 200px;
         object-fit: cover;
     }
 
     p {
-        background-color: #7DA61E;
-        color: #140539;
+        background-color: map-get($colores, extra1);
+        color: map-get($colores, primary);
         height: 12em;
         font-size: 1.25em;
         padding-left: 0.5rem;
@@ -61,24 +59,23 @@ h2 {
 
 .caption__titulo {
     font-size: 1.5em;
-    color: #7DA61E;
+    color: map-get($colores, extra1);
 }
 
 
 
 .logoTable {
-    height: 8em;
+    @include sizes(10em,8em);
     margin-top: 1rem;
     margin-bottom: 1rem;
-    width: 10em;
 }
 
 caption {
     padding: 0;
 
     div {
-        background-color: #140539;
-        justify-content: space-between;
+        @include flex(row,space-between, flex-start, 0, wrap);
+        background-color: map-get($colores, primary);
         align-items: center;
         padding-left: 1rem;
         padding-right: 10rem;
@@ -100,11 +97,11 @@ table {
 
         padding: 0.5em 1em 0.5em 1em;
         text-align: center;
-        background-color: #B7DE5D;
+        background-color: map-get($colores, extra2);
     }
 
     th {
-        background-color: #94D104;
+        background-color: map-get($colores, secondary);
         color: #302827;
         text-align: center;
         font-size: 1em;
@@ -113,7 +110,7 @@ table {
     }
 
     p {
-        color: #140539;
+        color: map-get($colores, primary);
         font-weight: bold;
         font-variant: small-caps;
         font-size: 1.5em;

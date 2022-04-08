@@ -44,21 +44,53 @@ main {
   max-width: 1200px;
   margin: 0 auto; }
 
-.boton {
-  background-color: #7DA61E;
-  font-weight: bold;
-  color: white;
-  border-radius: 3.5rem;
-  border-color: #7DA61E;
-  padding: 1rem 4rem;
-  transition: background-color .1s ease-in-out; }
-  .boton:focus {
-    background-color: #B7DE5D;
-    border-color: #140539; }
-
 .logo {
   width: 12.5em;
   height: 12.5em; }
+
+.bg--spinning {
+  background-image: url("../img/spinning.jpg");
+  background-size: cover; }
+
+.bg--box {
+  background-image: url("../img/box.jpg");
+  background-size: cover; }
+
+.bg--crossfit {
+  background-image: url("../img/crossfit.jpg");
+  background-size: cover; }
+
+.bg--musculacion {
+  background-image: url("../img/musculacion.jpg");
+  background-size: cover; }
+
+.bg--cardio {
+  background-image: url("../img/cardio.jpg");
+  background-size: cover; }
+
+.bg--natacion {
+  background-image: url("../img/natacion.jpg");
+  background-size: cover; }
+
+.bg--yoga {
+  background-image: url("../img/yoga.jpg");
+  background-size: cover; }
+
+.bg--stretching {
+  background-image: url("../img/stretching.jpg");
+  background-size: cover; }
+
+.bg--zumba {
+  background-image: url("../img/zumba.jpg");
+  background-size: cover; }
+
+.bg--abs {
+  background-image: url("../img/abs.jpg");
+  background-size: cover; }
+
+.bg--functional {
+  background-image: url("../img/functional.jpg");
+  background-size: cover; }
 
 .contenedoresSections:hover h3 {
   transform: scale(1.5, 1.5); }
@@ -73,6 +105,18 @@ main {
   animation: logo 5s infinite alternate ease-in-out;
   overflow: hidden; }
 
+.boton, .botonContacto {
+  background-color: #7DA61E;
+  font-weight: bold;
+  color: white;
+  border-radius: 3.5rem;
+  border-color: #7DA61E;
+  padding: 1rem 4rem;
+  transition: background-color .1s ease-in-out; }
+  .boton:focus, .botonContacto:focus {
+    background-color: #B7DE5D;
+    border-color: #140539; }
+
 /*PARTIALS*/
 header {
   grid-area: header;
@@ -82,12 +126,22 @@ header {
   width: 100%; }
 
 .contenedorNavegacion {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-content: flex-start;
+  gap: 0;
+  flex-wrap: nowrap;
   align-items: center;
   padding: 0 2rem; }
 
 .nav__menu {
-  justify-content: space-between; }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: flex-start;
+  gap: 0;
+  flex-wrap: nowrap; }
   .nav__menu li a {
     font-size: 1.8vw;
     padding: 1vw; }
@@ -113,13 +167,26 @@ li:hover > a {
   color: #94D104; }
 
 footer {
-  align-items: center;
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-content: center;
+  gap: 0;
+  flex-wrap: nowrap;
+  align-items: center;
   background-color: #140539;
   color: white;
-  height: 10vh; }
+  height: 10vh;
+  padding-top: 6rem; }
   footer .nav__menu {
-    display: flex; }
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+    gap: 1rem;
+    flex-wrap: nowrap; }
     footer .nav__menu img {
       filter: invert(80%) sepia(22%) saturate(5837%) hue-rotate(31deg) brightness(99%) contrast(97%); }
 
@@ -130,8 +197,7 @@ footer {
   width: 100%;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: "activ nosotros"
- "activ contacto"; }
+  grid-template-areas: "activ nosotros" "activ contacto"; }
 
 .activ {
   grid-area: activ; }
@@ -145,14 +211,17 @@ footer {
 .carousel-caption {
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  align-content: center;
+  gap: 0;
+  flex-wrap: nowrap; }
   .carousel-caption h3 {
     z-index: 1; }
 
 .contenedoresSections {
   background-size: cover;
-  width: 100%;
   height: 100%;
+  width: 100%;
   align-items: center;
   justify-content: center; }
   .contenedoresSections h3 {
@@ -163,12 +232,10 @@ footer {
     transition: transform .3s ease-in-out; }
 
 .contenedorNosotros {
-  background-image: url("../img/discos.jpg");
-  height: 100%; }
+  background-image: url("../img/discos.jpg"); }
 
 .contenedorContacto {
-  background-image: url("../img/recepcion.jpg");
-  height: 100%; }
+  background-image: url("../img/recepcion.jpg"); }
 
 #asociate {
   justify-content: space-evenly;
@@ -201,22 +268,18 @@ footer {
     margin-bottom: 0;
     font-weight: 700; }
 
-.boton {
-  background-color: #7DA61E;
-  font-weight: bold;
-  color: white;
-  border-radius: 3.5rem;
-  border-color: #7DA61E;
-  padding: 1rem 4rem;
-  transition: background-color .1s ease-in-out; }
-
 #sectionLogo {
   background-image: url(../img/contacto.jpeg);
-  width: 100%;
   height: 40vh;
+  width: 100%;
   background-size: cover;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: center; }
+  align-content: flex-start;
+  gap: 0;
+  flex-wrap: wrap; }
 
 .logoFondo {
   height: 30vh; }
@@ -231,10 +294,13 @@ footer {
   margin-bottom: 0; }
 
 #listaActiv {
-  flex-wrap: wrap;
-  justify-content: space-around;
   background-color: #140539;
-  gap: 0.5rem; }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: flex-start;
+  gap: 0.5rem;
+  flex-wrap: wrap; }
 
 #mainActiv {
   background-color: white; }
@@ -246,7 +312,7 @@ footer {
   width: 30em;
   color: white;
   background-color: #140539; }
-  .activityCard img {
+  .activityCard div {
     height: 200px;
     object-fit: cover; }
   .activityCard p {
@@ -275,15 +341,20 @@ h2 {
 
 .logoTable {
   height: 8em;
+  width: 10em;
   margin-top: 1rem;
-  margin-bottom: 1rem;
-  width: 10em; }
+  margin-bottom: 1rem; }
 
 caption {
   padding: 0; }
   caption div {
-    background-color: #140539;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-content: flex-start;
+    gap: 0;
+    flex-wrap: wrap;
+    background-color: #140539;
     align-items: center;
     padding-left: 1rem;
     padding-right: 10rem; }
@@ -307,19 +378,30 @@ table {
     font-size: 1.5em; }
 
 .contenedorFormulario {
-  width: 100%;
   height: 60rem;
-  background-color: #140539;
-  justify-content: space-between; }
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: flex-start;
+  gap: 0;
+  flex-wrap: nowrap;
+  background-color: #140539; }
   .contenedorFormulario img {
-    width: 55%;
     height: 100%;
+    width: 55%;
     object-fit: cover; }
 
 #contacto {
   min-height: 100vh;
   align-items: center;
-  background-color: white; }
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+  gap: 0;
+  flex-wrap: nowrap; }
   #contacto article {
     color: gray;
     font-weight: 300;
@@ -327,35 +409,44 @@ table {
     width: 15em; }
   #contacto > div {
     margin-left: 2rem;
-    margin-right: 2rem; }
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    gap: 0;
+    flex-wrap: nowrap;
+    margin-bottom: 10rem; }
   #contacto h2 {
     align-self: flex-start;
     margin-bottom: 10rem;
     padding-left: 1rem; }
-  #contacto .flex-columna {
-    margin-bottom: 10rem; }
 
 .contenedorCasillas {
   width: 15em; }
 
 .contenedorInput {
+  height: 2.5rem;
+  width: 2.5rem;
   background-color: #140539;
   border: 1px solid white;
   color: white;
-  width: 2.5rem;
-  height: 2.5rem;
   border-radius: .5em;
   transition: width .6s linear; }
   .contenedorInput:focus {
     width: 15rem; }
 
 form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: flex-start;
+  gap: 0;
+  flex-wrap: wrap;
   color: white;
   padding-left: 2rem;
   padding-top: 1rem;
   padding-right: 1rem;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
   font-size: 1.25em; }
 
 textarea {
@@ -364,13 +455,14 @@ textarea {
 label {
   display: block; }
 
+.botonContacto {
+  padding: 1rem 2.5rem;
+  margin-right: 1rem; }
+
 #about {
   display: grid;
   width: 100%;
-  grid-template-areas: "fondo fondo"
- "article article"
- "article article"
- "ubic ubic";
+  grid-template-areas: "fondo fondo" "article article" "article article" "ubic ubic";
   background-color: #140539;
   color: white;
   gap: 1rem; }
@@ -378,8 +470,8 @@ label {
     grid-area: article;
     border-bottom: 1px solid #94D104; }
   #about .flex-fila img {
-    width: 70em;
     height: auto;
+    width: 70em;
     border-radius: 20em;
     margin-left: 2rem;
     margin-right: 2rem; }
@@ -416,19 +508,22 @@ label {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-content: flex-start;
+  gap: 0;
+  flex-wrap: nowrap;
   margin: 1rem auto; }
 
 .mapouter {
   position: relative;
   text-align: right;
-  width: 100%;
-  height: 400px; }
+  height: 400px;
+  width: 100%; }
 
 .gmap_canvas {
   overflow: hidden;
   background: none;
-  width: 30%;
-  height: 400px; }
+  height: 400px;
+  width: 30%; }
 
 .gmap_iframe {
   height: 400px; }
@@ -440,8 +535,12 @@ label {
     flex-direction: column;
     width: 100%; }
   footer {
+    display: flex;
     flex-direction: column;
-    justify-content: space-around; }
+    justify-content: space-around;
+    align-content: flex-start;
+    gap: 0;
+    flex-wrap: nowrap; }
     footer p {
       margin: 0;
       padding: 0; }
@@ -453,8 +552,12 @@ label {
     background-position: center;
     height: 30vh; }
   #asociate {
+    display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
     gap: 2rem;
+    flex-wrap: nowrap;
     align-items: center; }
   #about .flex-fila img {
     width: 100%;
@@ -472,8 +575,12 @@ label {
     margin: 0 1rem;
     width: auto; }
   .contenedorFormulario {
+    display: flex;
     flex-direction: column;
-    justify-content: center; }
+    justify-content: center;
+    align-content: flex-start;
+    gap: 0;
+    flex-wrap: nowrap; }
   #contacto {
     min-height: 100vh;
     width: 100%; }

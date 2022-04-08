@@ -6,19 +6,18 @@
         "article article"
         "article article"
         "ubic ubic";
-    background-color: #140539;
+    background-color:map-get($colores, primary);
     color: white;
     gap: 1rem;
 
     article {
         grid-area: article;
-        border-bottom: 1px solid #94D104;
+        border-bottom: 1px solid map-get($colores, secondary);
     }
 
     .flex-fila {
         img {
-            width: 70em;
-            height: auto;
+            @include sizes(70em,auto);
             border-radius: 20em;
             margin-left: 2rem;
             margin-right: 2rem;
@@ -45,14 +44,14 @@
     background-image: url(../img/soviet.jpg);
     background-size: 100%;
     background-position: center;
-    border-bottom: 1px solid #94D104;
+    border-bottom: 1px solid map-get($colores, secondary);
 
 }
 
 
 #ubicacion {
     grid-area: ubic;
-    border-bottom: 1px solid #94D104;
+    border-bottom: 1px solid map-get($colores, secondary);
 }
 
 .flex-nosotros {
@@ -65,9 +64,7 @@
 }
 
 .mapa {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    @include flex( $justify: center);
     margin: 1rem auto;
 }
 
@@ -75,15 +72,13 @@
 .mapouter {
     position: relative;
     text-align: right;
-    width: 100%;
-    height: 400px;
+    @include sizes(100%,400px);
 }
 
 .gmap_canvas {
     overflow: hidden;
     background: none;
-    width: 30%;
-    height: 400px;
+    @include sizes(30%,400px);
 }
 
 .gmap_iframe {

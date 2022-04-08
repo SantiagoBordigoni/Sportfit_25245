@@ -1,12 +1,14 @@
 footer {
+    @include flex($justify: space-between,$align:center);
     align-items: center;
-    justify-content: space-between;
-    background-color: #140539;
+    background-color: map-get($colores, primary);
     color: white;
     height: 10vh;
 
     .nav__menu {
-        display: flex;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        @include flex($justify: space-between,$gap:1rem);
         img{
             filter:invert(80%) sepia(22%) saturate(5837%) hue-rotate(31deg) brightness(99%) contrast(97%);
         }
@@ -14,4 +16,5 @@ footer {
         
 
     }
+    padding-top: 6rem;
 }

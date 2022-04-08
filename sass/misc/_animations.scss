@@ -23,3 +23,18 @@
     overflow: hidden;
 }
 
+.boton {
+    background-color: map-get($colores, extra1);
+    font-weight: bold;
+    color: white;
+    border-radius: 3.5rem;
+    border-color:  map-get($colores, extra1);
+    padding: 1rem 4rem;
+    transition: background-color .1s ease-in-out;
+
+    &:focus {
+        background-color:  map-get($colores, extra2);
+        border-color: map-get($colores, primary);
+    }
+
+}

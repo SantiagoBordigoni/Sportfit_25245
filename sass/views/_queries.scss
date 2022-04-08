@@ -7,8 +7,7 @@
     }
 
     footer {
-        flex-direction: column;
-        justify-content: space-around;
+        @include flex($direction:column, $justify: space-around);
 
         p {
             margin: 0;
@@ -30,14 +29,14 @@
     }
 
     #asociate {
-        flex-direction: column;
-        gap: 2rem;
+        @include flex($direction:column, $gap:2rem);
         align-items: center;
 
     }
 
 
     #about {
+        
         .flex-fila {
             img {
                 width: 100%;
@@ -70,8 +69,8 @@
 
 
     .contenedorFormulario {
-        flex-direction: column;
-        justify-content: center;
+        @include flex($direction:column, $justify: center);
+
     }
 
     #contacto {
