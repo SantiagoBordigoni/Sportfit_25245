@@ -55,7 +55,7 @@
 }
 
 .contenedorInput {
-    @include sizes(2.5rem,2.5rem);
+    @include sizes(10rem,2.5rem);
     background-color: map-get($colores, primary);
     border: 1px solid white;
     color: white;
