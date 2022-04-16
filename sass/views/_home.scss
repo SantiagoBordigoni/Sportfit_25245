@@ -49,12 +49,12 @@
 
 
 .contenedorNosotros {
-    background-image: url("../img/discos.jpg");
+    background-image: url("../img/discosBlur.png");
     
 }
 
 .contenedorContacto {
-    background-image: url("../img/recepcion.jpg");
+    background-image: url("../img/recepcionBlur.png");
 }
 
 #asociate {
@@ -110,7 +110,7 @@
 
 
 #sectionLogo {
-    background-image: url(../img/contacto.jpeg);
+    background-image: url(../img/contacto.jpg);
     @include sizes(100%,40vh);
     background-size: cover;
     align-items: center;
