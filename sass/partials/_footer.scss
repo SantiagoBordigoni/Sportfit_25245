@@ -8,7 +8,7 @@ footer {
     .nav__menu {
         padding-top: 1rem;
         padding-bottom: 1rem;
-        @include flex($justify: space-between,$gap:1rem);
+        @include flex($justify: space-between,$gap:2rem);
         img{
             filter:invert(80%) sepia(22%) saturate(5837%) hue-rotate(31deg) brightness(99%) contrast(97%);
         }

@@ -185,7 +185,7 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-content: flex-start;
-    gap: 1rem;
+    gap: 2rem;
     flex-wrap: nowrap; }
     footer .nav__menu img {
       filter: invert(80%) sepia(22%) saturate(5837%) hue-rotate(31deg) brightness(99%) contrast(97%); }
@@ -610,4 +610,7 @@ label {
 
 @media screen and (min-width: 320px) and (max-width: 720px) {
   table {
-    display: none; } }
+    display: none; }
+  .logo {
+    height: 12.5em;
+    width: 30vw; } }
