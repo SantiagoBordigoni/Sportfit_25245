@@ -613,4 +613,6 @@ label {
     display: none; }
   .logo {
     height: 8em;
-    width: 30vw; } }
+    width: 30vw; }
+  main {
+    padding-top: 8em; } }
