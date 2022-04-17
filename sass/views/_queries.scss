@@ -145,7 +145,7 @@
         display: none;
     }
     .logo{
-        @include sizes(30vw,8em);
+        @include sizes(8em,8em);
     }
     main{
         padding-top: 8em;
