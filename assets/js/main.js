@@ -32,8 +32,61 @@ class ProductoCarrito {
 }
 
 // FUNCIONES 
+function eliminarProducto(productoAEliminar){
+  // Vemos si ya hay planes de este tipo en el carrito o si hay que agregar uno nuevo
+ 
+  const indiceProductoEncontrado = carrito.findIndex((productoCarrito) => productoCarrito.plan === productoAEliminar.plan);
 
-function renderizarCarrito{}
+  if(indiceProductoEncontrado !== -1){
+    carrito.splice(indiceProductoEncontrado,1);
+  }
+
+  renderizarCarrito();
+
+}
+
+
+function renderizarCarrito () {
+
+  // Limpio la tabla
+  tbodyCarrito.innerHTML = "";
+
+  for(const productoCarrito of carrito) {
+
+      // Creo el tr
+      const tr = document.createElement("tr");
+
+      const tdNombre = document.createElement("td");
+      tdNombre.innerText = `${productoCarrito.plan}`;
+
+      const tdPrecio = document.createElement("td");
+      tdPrecio.innerText = `$${productoCarrito.precio}`;
+
+      const tdCantidad = document.createElement("td");
+      tdCantidad.innerText = `${productoCarrito.cantidad}`;
+
+      const tdAcciones = document.createElement("td");
+      const btnEliminarProducto = document.createElement("button");
+      btnEliminarProducto.innerText = "Eliminar";
+
+      // Creamos el evento cuando se quiera eliminar un producto
+      btnEliminarProducto.addEventListener("click", () => {
+          eliminarProducto(productoCarrito);
+      });
+
+      tdAcciones.append(btnEliminarProducto);
+
+      // Agrego los td al tr
+      tr.append(tdNombre, tdPrecio, tdCantidad, tdAcciones);
+
+      // Agrego el tr al tbody
+      tbodyCarrito.append(tr);
+  }
+
+  // Calcular total
+  calcularTotal();
+
+}
 
 
 function agregarProductoAlCarrito (productoAAgregaar){
@@ -51,6 +104,7 @@ function agregarProductoAlCarrito (productoAAgregaar){
   } else { //Le agrego la cantidad
     carrito[indiceProductoEncontrado].sumarCantidad();
   }
+  renderizarCarrito();
 }
 
 
@@ -258,23 +312,24 @@ let personasAsociadas = [];
 let botonPlan1 = document.querySelector("#asociate #planUno button")
 let botonPlan2 = document.querySelector("#asociate #planDos button")
 let botonPlan3 = document.querySelector("#asociate #planTres button")
-let carritoDeCompras = document.querySelector(".carrito")
+let carritoDeCompras = document.querySelector(".divCarrito")
 
 botonPlan1.addEventListener("click", respuestaClick1)
 botonPlan2.addEventListener("click", respuestaClick2)
 botonPlan3.addEventListener("click", respuestaClick3)
+
 carritoDeCompras.addEventListener("mouseover", () => {
-  console.log("FUNCIONA!")
-  carritoDeCompras.classList = "carritoSeleccionado"
-  let divCarrito = document.createElement("div");
-  divCarrito.classList = "divCarrito";
+  carritoDeCompras.classList = "carritoSeleccionado";
+  const tbodyCarrito = document.getElementById(tbodyCarrito)
+  
 
   });
 
 carritoDeCompras.addEventListener("mouseout", () => {
   console.log("FUNCIONA!")
-  carritoDeCompras.classList = "carrito"
+  carritoDeCompras.classList = "divCarrito"
   });
+
 let sociosNuevos = 0;
 let planes =  [];
 let carrito = [];

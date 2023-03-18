@@ -621,15 +621,19 @@ label {
   main {
     padding-top: 8em; } }
 
-.carrito {
+.divCarrito img{
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(350deg) brightness(117%) contrast(100%);
 }
 
-.carritoSeleccionado{
+.carritoSeleccionado img{
   filter: invert(80%) sepia(22%) saturate(5837%) hue-rotate(31deg) brightness(99%) contrast(97%);
 }
 
-.divCarrito{
-  background-color: #140539
+.divCarrito table{
+  display: none;
+  position: absolute;
   
 }
+
+
+
