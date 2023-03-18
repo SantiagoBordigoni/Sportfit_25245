@@ -197,7 +197,8 @@ footer {
   width: 100%;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: "activ nosotros" "activ contacto"; }
+  grid-template-areas: "activ nosotros"
+ "activ contacto"; }
 
 .activ {
   grid-area: activ; }
@@ -462,7 +463,10 @@ label {
 #about {
   display: grid;
   width: 100%;
-  grid-template-areas: "fondo fondo" "article article" "article article" "ubic ubic";
+  grid-template-areas: "fondo fondo"
+ "article article"
+ "article article"
+ "ubic ubic";
   background-color: #140539;
   color: white;
   gap: 1rem; }
@@ -616,3 +620,7 @@ label {
     width: 8em; }
   main {
     padding-top: 8em; } }
+
+.carrito {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(350deg) brightness(117%) contrast(100%);
+}
