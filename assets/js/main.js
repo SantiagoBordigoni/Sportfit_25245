@@ -19,7 +19,40 @@ class Plan {
     this.info = info;
   }
 }
+
+class ProductoCarrito {
+  constructor(plan, precio, cantidad = 1){
+    this.plan = plan;
+    this.precio = precio;
+    this.cantidad = cantidad;
+  }
+  sumarCantidad(){
+    this.cantidad++;
+  };
+}
+
 // FUNCIONES 
+
+function renderizarCarrito{}
+
+
+function agregarProductoAlCarrito (productoAAgregaar){
+ 
+  // Vemos si ya hay planes de este tipo en el carrito o si hay que agregar uno nuevo
+ 
+  const indiceProductoEncontrado = carrito.findIndex((productoCarrito) => productoCarrito.plan === productoAAgregaar.plan);
+  
+  // En caso de no existir lo agregamos
+
+  if (indiceProductoEncontrado ===  -1) {
+    carrito.push(
+      new ProductoCarrito(productoAAgregaar.plan, productoAAgregaar.precio)
+    );
+  } else { //Le agrego la cantidad
+    carrito[indiceProductoEncontrado].sumarCantidad();
+  }
+}
+
 
 function obtenerMembresiasDelJSON () {
 
@@ -34,7 +67,7 @@ function obtenerMembresiasDelJSON () {
               planes.push(new Plan(
                 tipoDePlanJSON.nombre,
                 tipoDePlanJSON.precio,
-                tipoDePlanJSON.adheridos,
+                tipoDePlanJSON.cantidadDeSocios,
                 tipoDePlanJSON.info,
               ));
           }
@@ -89,8 +122,10 @@ function respuestaClick1(){
       .then((response) =>{
         for (let i = 1; i <= parseInt(response.value); i++){
           personasAsociadas.push(new Socio (i + personasAsociadas.length, 1, planes[0].precio));
+          agregarProductoAlCarrito(personasAsociadas[sociosNuevos]);
+          sociosNuevos++;
         }
-        
+        planes[0].cantidadDeSocios+=parseInt(response.value)
       })
     }
   })
@@ -142,8 +177,10 @@ function respuestaClick2(){
       .then((response) =>{
         for (let i = 1; i <= parseInt(response.value); i++){
           personasAsociadas.push(new Socio (i + personasAsociadas.length, 2, planes[1].precio));
+          agregarProductoAlCarrito(personasAsociadas[sociosNuevos]);
+          sociosNuevos++;
         }
-        
+        planes[1].cantidadDeSocios+=parseInt(response.value)
       })
     }
   })
@@ -194,8 +231,10 @@ function respuestaClick3(){
       .then((response) =>{
         for (let i = 1; i <= parseInt(response.value); i++){
           personasAsociadas.push(new Socio (i + personasAsociadas.length, 3, planes[2].precio));
+          agregarProductoAlCarrito(personasAsociadas[sociosNuevos]);
+          sociosNuevos++;
         }
-        
+        planes[2].cantidadDeSocios+=parseInt(response.value)
       })
     }
   })
@@ -219,12 +258,26 @@ let personasAsociadas = [];
 let botonPlan1 = document.querySelector("#asociate #planUno button")
 let botonPlan2 = document.querySelector("#asociate #planDos button")
 let botonPlan3 = document.querySelector("#asociate #planTres button")
-let carritoDeCompras = document.getElementsByClassName("carrito")
+let carritoDeCompras = document.querySelector(".carrito")
 
 botonPlan1.addEventListener("click", respuestaClick1)
 botonPlan2.addEventListener("click", respuestaClick2)
 botonPlan3.addEventListener("click", respuestaClick3)
+carritoDeCompras.addEventListener("mouseover", () => {
+  console.log("FUNCIONA!")
+  carritoDeCompras.classList = "carritoSeleccionado"
+  let divCarrito = document.createElement("div");
+  divCarrito.classList = "divCarrito";
+
+  });
+
+carritoDeCompras.addEventListener("mouseout", () => {
+  console.log("FUNCIONA!")
+  carritoDeCompras.classList = "carrito"
+  });
+let sociosNuevos = 0;
 let planes =  [];
 let carrito = [];
 obtenerMembresiasDelJSON();
+
 
