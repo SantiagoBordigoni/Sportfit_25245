@@ -32,13 +32,33 @@ class ProductoCarrito {
 }
 
 // FUNCIONES 
+
+function calcularTotal(){
+  let total = 0;
+  total = carrito.reduce((acumulador, productoCarrito) =>{
+    return acumulador + (productoCarrito.precio * productoCarrito.cantidad);
+
+  },0);
+  spanTotal.innerHTML =`$${total}`;
+
+}
+
 function eliminarProducto(productoAEliminar){
-  // Vemos si ya hay planes de este tipo en el carrito o si hay que agregar uno nuevo
  
   const indiceProductoEncontrado = carrito.findIndex((productoCarrito) => productoCarrito.plan === productoAEliminar.plan);
 
   if(indiceProductoEncontrado !== -1){
     carrito.splice(indiceProductoEncontrado,1);
+    // En caso de eliminar futuros miembros, tengo que sacarlos de los socios adheridos para cada plan
+    if (productoAEliminar["plan"]===1){
+      planes[0].cantidadDeSocios-=productoAEliminar.cantidad
+    }
+    else if (productoAEliminar["plan"]===2){
+      planes[1].cantidadDeSocios-=productoAEliminar.cantidad
+    }
+    else{
+      planes[2].cantidadDeSocios-=productoAEliminar.cantidad
+    }
   }
 
   renderizarCarrito();
@@ -67,6 +87,7 @@ function renderizarCarrito () {
 
       const tdAcciones = document.createElement("td");
       const btnEliminarProducto = document.createElement("button");
+      btnEliminarProducto.className ="botonChico"
       btnEliminarProducto.innerText = "Eliminar";
 
       // Creamos el evento cuando se quiera eliminar un producto
@@ -297,15 +318,6 @@ function respuestaClick3(){
 //CAPTURAMOS EL VALOR DE LA PROMESA
 
 
-// Se otorga un descuento por cantidad en caso de que se inscriban a 3 personas o mas
-function calcularTotal() {
-    let total = 0;
-    for (const socio of personasAsociadas) {
-        total += socio.precio;
-    }
-    return total;
-  }
-
 // INICIO DEL PROGRAMA
 let personasAsociadas = [];
 
@@ -331,6 +343,7 @@ carritoDeCompras.addEventListener("mouseout", () => {
   });
 
 let sociosNuevos = 0;
+const spanTotal = document.getElementById("total");
 let planes =  [];
 let carrito = [];
 obtenerMembresiasDelJSON();

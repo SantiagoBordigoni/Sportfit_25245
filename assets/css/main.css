@@ -137,10 +137,11 @@ header {
 
 .nav__menu {
   display: flex;
+  margin-right: 16vw;
   flex-direction: row;
   justify-content: space-between;
   align-content: flex-start;
-  gap: 0;
+  gap: 2vw;
   flex-wrap: nowrap; }
   .nav__menu li a {
     font-size: 1.8vw;
@@ -620,20 +621,41 @@ label {
     width: 8em; }
   main {
     padding-top: 8em; } }
-
+/* NUEVOS ESTILOS POR PROYECTO JS */
 .divCarrito img{
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(350deg) brightness(117%) contrast(100%);
+}
+.carritoSeleccionado{
+  display: block;
 }
 
 .carritoSeleccionado img{
   filter: invert(80%) sepia(22%) saturate(5837%) hue-rotate(31deg) brightness(99%) contrast(97%);
 }
 
-.divCarrito table{
+.divCarrito .listaCarrito {
   display: none;
   position: absolute;
   
 }
 
+.carritoSeleccionado .listaCarrito{
+  margin-top: 2vh;
+  position: absolute;
+  display: block;
+}
+.botonChico {
+  background-color: #140539;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.5rem;
+   }
+  .botonChico:focus{
+    border-color:#7DA61E ; }
 
+.carritoSeleccionado h6 {
+  font-family: 'Roboto', sans-serif;
+  color: #B7DE5D;
+  font-size: 1em;
+  font-weight: 700; }
 
