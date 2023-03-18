@@ -640,7 +640,7 @@ label {
 }
 
 .carritoSeleccionado .listaCarrito{
-  margin-top: 2vh;
+  padding-top: 2vh;
   position: absolute;
   display: block;
 }
