@@ -1,0 +1,23 @@
+[
+    {
+        "nombre": "Plan mensual",
+        "precio": 10000 ,
+        "cantidadDeSocios": 2606, 
+        "info": "Plan Mensual: cuenta con beneficios como las actividades Indoor/Outdoor, clases online y acceso a pileta."
+
+    },
+    {
+        "nombre": "Plan anual",
+        "precio": 7500,
+        "cantidadDeSocios":2611,
+        "info": "Plan Anual: cuenta con beneficios como las actividades Indoor/Outdoor, clases online y acceso a pileta. Acceda por un precio mensual menor al primer plan."
+
+    },
+    {
+        "nombre": "Plan anual plus",
+        "precio": 9000,
+        "cantidadDeSocios": 611,
+        "info": "Plan Anual Plus: cuenta con beneficios como las actividades Indoor/Outdoor, clases online, acceso a pileta y beneficios exclusivos con la tarjeta SportFit."
+
+    }
+]
