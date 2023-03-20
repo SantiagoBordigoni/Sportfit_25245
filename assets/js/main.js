@@ -90,7 +90,7 @@ function renderizarCarrito () {
       btnEliminarProducto.className ="botonChico"
       btnEliminarProducto.innerText = "Eliminar";
 
-      // Creamos el evento cuando se quiera eliminar un producto
+      // Creamos el evento cuando se quiera eliminar un plan
       btnEliminarProducto.addEventListener("click", () => {
           eliminarProducto(productoCarrito);
       });
@@ -332,7 +332,7 @@ botonPlan3.addEventListener("click", respuestaClick3)
 
 carritoDeCompras.addEventListener("mouseover", () => {
   carritoDeCompras.classList = "carritoSeleccionado";
-  const tbodyCarrito = document.getElementById(tbodyCarrito)
+  const tbodyCarrito = document.getElementById("tbodyCarrito")
   
 
   });
